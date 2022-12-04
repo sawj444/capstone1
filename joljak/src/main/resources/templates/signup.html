@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>로그인</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+</head>
+<!--헤더-->
+
+<body>
+<div class="header">
+    <h1>회원가입</h1>
+</div>
+<div class="signup-form">
+    <form action="" th:action th:object="${member}" method="post">
+        <div th:if="${#fields.hasGlobalErrors()}">
+            <p class="field-error" th:each="err : ${#fields.globalErrors()}" th:text="${err}">전체 오류 메시지</p>
+        </div>
+        <b>USER ID</b><br>
+        <input type="text" id="loginId" th:field="*{loginId}" class="text-field" th:errorclass="field-error"
+               placeholder="아이디">
+        <div class="field-error" th:errors="*{loginId}"/>
+
+        <b>비밀번호</b><br>
+        <input type="password" id="password" th:field="*{password}" class="text-field" th:errorclass="field-error"
+               placeholder="비밀번호">
+        <div class="field-error" th:errors="*{password}"/>
+        <b>닉네임</b><br>
+        <input type="text" id="nickname" th:field="*{nickname}" class="text-field" th:errorclass="field-error"
+               placeholder="닉네임">
+        <div class="field-error" th:errors="*{nickname}"/>
+
+        <b>이메일</b><br>
+        <input type="text" id="email" th:field="*{email}" class="text-field" th:errorclass="field-error"
+               placeholder="ex) gildong2@naver.com"><br>
+        <div class="field-error" th:errors="*{email}"/>
+        <button type="submit" class="sign-btn" >가입</button>
+        <button type="button" th:onclick="|location.href='@{/}'|">취소</button>
+    </form>
+
+</div>
+</body>
+
+</html>

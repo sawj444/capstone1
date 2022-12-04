@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    
+}
+
+.editor-contents{
+    padding-bottom:50px;
+    margin-top:50px;
+    width: 1050px; 
+    display:flex; 
+    align-items:center; 
+    justify-content: center; 
+    flex-direction: column;
+}
+
+#title-box{ 
+    width:100%; 
+    display:flex; 
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#title{ 
+    width:450px; 
+    height:40px; 
+    border:1px #D8D8D8 solid; 
+    border-radius: 5px; 
+    margin:0; 
+    padding:0 10px; 
+    margin-bottom:10px; 
+    font-family: 'Apple SD Gothic Neo';
+    font-size:14px; 
+}
+
+#btn-box{ 
+    width:100%; 
+    display:flex; 
+    justify-content: center; 
+}
+#btn-box-center{ 
+    width:450px; 
+    padding-top: 20px;
+    display:flex; 
+    justify-content: space-between;
+}
+#cancel-btn{ 
+    width:160px; 
+    height:40px; 
+    border-radius:7px; 
+    border: 1px #D8D8D8 solid; 
+    
+    display:flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+#submit-btn{ 
+    width:160px; 
+    height:40px; 
+    border-radius:7px; 
+    background-color: #4bb7f1;
+    color:white; 
+    
+    display:flex; 
+    justify-content: center; 
+    align-items: center; 
+}

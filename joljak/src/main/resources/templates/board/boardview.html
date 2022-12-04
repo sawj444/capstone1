@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>board</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href= "api/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel = "stylesheet" href= "api/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel = "stylesheet" href= "css/board.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<!-- 헤더 -->
+<div class="container">
+    <header
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+
+        <nav class="navbar navbar-light">
+            <div class="container">
+                <a class="navbar-brand" th:href="@{/main}">
+                    <img src="/images/assem_logo_background.png" alt="" width="62.58" height="40">
+                </a>
+            </div>
+        </nav>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a th:href="@{/}" class="nav-link px-4 link-secondary">코스정보</a></li>
+            <li><a href="#" class="nav-link px-4 link-dark">네비게이션</a></li>
+            <li><a th:href="@{/board}" class="nav-link px-4 link-dark">게시판</a></li>
+            <li><a href="#" class="nav-link px-4 link-dark">마이페이지</a></li>
+            <!-- <li><a href="#" class="nav-link px-2 link-dark">About</a></li> -->
+        </ul>
+
+<!--        로그인, 회원가입 주석-->
+<!--        <div class="col-md-3 text-end">-->
+<!--            <button onclick="location.href='/login/login'" type="button" class="btn btn-outline-primary me-2">Login</button>-->
+<!--            <button onclick="location.href='/members/add'" type="button" class="btn btn-primary">Sign-up</button>-->
+<!--        </div>-->
+    </header>
+</div>
+<!-- 헤더 -->
+<div class="container">
+    <h2>게시글 상세 화면</h2>
+    <table class="board_detail">
+        <colgroup>
+            <col width="15%"/>
+            <col width="35%"/>
+            <col width="15%"/>
+            <col width="35%"/>
+        </colgroup>
+        <caption>게시글 상세내용</caption>
+        <tbody>
+        <tr>
+            <th scope="row">글 번호</th>
+            <td th:text="${board.id}"></td>
+            <th scope="row">조회수</th>
+            <td th:text="${board.views}"></td>
+        </tr>
+        <tr>
+            <th scope="row">작성자</th>
+            <td th:text="${board.nickname}"></td>
+            <th scope="row">작성일</th>
+            <td th:text="${#temporals.format(board.regdate, 'yyyy-MM-dd HH:mm:ss')}"></td>
+        </tr>
+        <tr>
+            <th scope="row">제목</th>
+            <td colspan="3">
+                <!--            <td th:text="${board.title}"></td>-->
+                <input type="text" id="title" name="title" readonly
+                       th:value="${board.title }"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="view_text">
+							<textarea title="내용" id="contents" name="contents" readonly
+                                      th:text="${board.content }"></textarea>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

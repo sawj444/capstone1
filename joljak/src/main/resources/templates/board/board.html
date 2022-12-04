@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href= "api/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel = "stylesheet" href= "api/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel = "stylesheet" href= "css/board.css">
+<!--    <link th:href="@{/css/board.css}" rel="stylesheet" />-->
+<!--    <link th:href="@{/api/font-awesome-4.7.0/css/font-awesome.css}" ref="stylesheet"/>-->
+<!--    <link th:href="@{/api/font-awesome-4.7.0/css/font-awesome.min.css}" ref="stylesheet"/>-->
+
+<!--    <link rel = "stylesheet" href= "/static/api/font-awesome-4.7.0/css/font-awesome.css">-->
+<!--    <link rel = "stylesheet" href= "/static/api/font-awesome-4.7.0/css/font-awesome.min.css">-->
+<!--    <link rel = "stylesheet" href= "../.">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>게시판</title>
+</head>
+<body>
+    <div> 
+        <div id = "top_area"> <!-- 이 부분 지우면 메인페이지와 동일-->
+            <div><a href="#">로그아웃</a></div>
+            <div><i class="fa fa-bars" aria-hidden="true"></i></div>
+        </div>
+
+        <!-- 헤더 -->
+        <div class="container">
+            <header
+                    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+
+                <nav class="navbar navbar-light">
+                    <div class="container">
+                        <a class="navbar-brand" th:href="@{/main}">
+                            <img src="images/assem_logo_background.png" alt="" width="62.58" height="40">
+                        </a>
+                    </div>
+                </nav>
+
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li><a th:href="@{/}" class="nav-link px-4 link-secondary">코스정보</a></li>
+                    <li><a href="#" class="nav-link px-4 link-dark">네비게이션</a></li>
+                    <li><a th:href="@{/board}" class="nav-link px-4 link-dark">게시판</a></li>
+                    <li><a href="#" class="nav-link px-4 link-dark">마이페이지</a></li>
+                    <!-- <li><a href="#" class="nav-link px-2 link-dark">About</a></li> -->
+                </ul>
+
+                <div class="col-md-3 text-end">
+                    <button onclick="location.href='/login/login'" type="button" class="btn btn-outline-primary me-2">Login</button>
+                    <button onclick="location.href='/members/add'" type="button" class="btn btn-primary">Sign-up</button>
+                </div>
+            </header>
+        </div>
+        <!-- 헤더 -->
+    
+        <div id="section">
+            <div>
+                <div id="tbl_1">
+                    <table>
+                        <tr>
+                            <td colspan ="3"><span>후기 게시판 인기 글</span></td>
+                        </tr>
+                        <tr>
+                            <td class="button_line">testestsefs</td>
+                            <td class="button_line"><i class="fa fa-thumbs-up" aria-hidden="true"></i>11</td>
+                            <td class="button_line"><i class="fa fa-thumbs-down" aria-hidden="true"></i>12</td>
+                        </tr>
+                        <tr>
+                            <td class="button_line">rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-up" aria-hidden="true"></i>rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-down" aria-hidden="true"></i>rrr</td>
+                        </tr>
+                        <tr>
+                            <td class="button_line">rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-up" aria-hidden="true"></i>rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-down" aria-hidden="true"></i>rrr</td>
+                        </tr>
+                        <tr>
+                            <td class="button_line">rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-up" aria-hidden="true"></i>rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-down" aria-hidden="true"></i>rrr</td>
+                        </tr>
+                        <tr>
+                            <td class="button_line">rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-up" aria-hidden="true"></i>rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-down" aria-hidden="true"></i>rrr</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="tbl_2">
+                    <table>
+                        <tr>
+                            <td colspan ="3"><span>자유 게시판 인기 글</span></td>
+                        </tr>
+                        <tr>
+                            <td class="button_line">testestsefs</td>
+                            <td class="button_line"><i class="fa fa-thumbs-up" aria-hidden="true"></i>11</td>
+                            <td class="button_line"><i class="fa fa-thumbs-down" aria-hidden="true"></i>12</td>
+                        </tr>
+                        <tr>
+                            <td class="button_line">rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-up" aria-hidden="true"></i>rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-down" aria-hidden="true"></i>rrr</td>
+                        </tr>
+                        <tr>
+                            <td class="button_line">rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-up" aria-hidden="true"></i>rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-down" aria-hidden="true"></i>rrr</td>
+                        </tr>
+                        <tr>
+                            <td class="button_line">rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-up" aria-hidden="true"></i>rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-down" aria-hidden="true"></i>rrr</td>
+                        </tr>
+                        <tr>
+                            <td class="button_line">rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-up" aria-hidden="true"></i>rrr</td>
+                            <td class="button_line"><i class="fa fa-thumbs-down" aria-hidden="true"></i>rrr</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id="section_child">
+                <div>
+                    <form action="#" method="get">
+                        <select name="select_opt">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+
+                    <div id="search_box">
+
+                        <input type="text" name="input_search">
+                        <button type="submit"><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
+                    </div>
+                        <button onclick="location.href='/boardwrite'" type="button" class="btn btn-primary" style="width:20%; background-color: #4bb7f1">글쓰기</button>
+                    </form>
+                </div>
+                <div id="tbl_03">
+                    <table>
+                        <tr>
+                            <td>번호</td>
+                            <td>제목</td>
+                            <td>작성자</td>
+                            <td>날짜</td>
+                            <td>조회수</td>
+                            <td>추천수</td>
+                        </tr>
+                        <tr th:each="board: ${list}">
+                            <td th:text="${board.id}"></td>
+                            <td >
+                                <a th:text="${board.title}" th:href="@{/board/view(id=${board.id})}"></a>
+                            </td>
+<!--                            <td th:text="${board.nickname}"></td>-->
+                            <td text="nickname"></td>
+                            <td th:text="${#temporals.format(board.regdate,'yyyy-MM-dd HH:mm')}"></td>
+                            <td th:text="${board.views}"></td>
+                            <td text="borad.referrals"></td>
+<!--                            <td th:text="${borad.referrals}"></td>-->
+                        </tr>
+
+                    </table>
+
+
+                </div>
+                <th:block th:each="page : ${#numbers.sequence(startPage, endPage)}">
+                    <a th:if="${page != nowPage}" th:href="@{/board(page = ${page - 1}, searchKeyword = ${param.searchKeyword})}" th:text="${page}"></a>
+                    <strong th:if="${page == nowPage}" th:text="${page}" style="color : red"></strong>
+                </th:block>
+<!--                <th:block th:each="page : ${#numbers.sequence(startPage, endPage)}">-->
+<!--                    <a th:if="${page != nowPage}" th:href="@{/board/list(page = ${page - 1}, searchKeyword = ${param.searchKeyword})}" th:text="${page}"></a>-->
+<!--                    <strong th:if="${page == nowPage}" th:text="${page}" style="color : red"></strong>-->
+<!--                </th:block>-->
+            </div>
+    
+            <div>
+    
+            </div>
+        </div>
+    </div>
+</body>
+</html>

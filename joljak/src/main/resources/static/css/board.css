@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+
+body > div {
+    width: 850px;
+}
+
+#top_area{
+    display: flex;
+    justify-content: right;
+}
+#top_area > div:nth-child(2) {
+    margin-left: 12px;
+}
+
+#nav_bar {
+    width: 100%;
+    display: flex;
+}
+#nav_bar > div:first-child {
+    width: 20%;
+    height: 55px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    background-color: rgba(67, 69, 69, 0.841);
+}
+#nav_bar > div:last-child {
+    width: 80%;
+}
+#nav_bar > div:last-child > div:first-child {
+    background-color: lightblue;
+    height: 55px;
+}
+#nav_bar > div:last-child > div:last-child {
+    background-color: lightgray;
+    height: 160px;
+}
+#section {
+    display: flex;
+    
+}
+#section > div:first-child {
+    width: 300px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+#tbl_1 > table, #tbl_2 > table {
+    border: 2px solid gray;
+    width: 100%;
+    border-spacing: 0;
+}
+#section > div:first-child tr:first-child {
+    background-color: lightcyan;
+}
+#section > div:first-child tr td {
+    border-bottom: 1px solid silver;
+    padding: 3px 0 3px 5px;
+}
+#section_child {
+    width: 550px;
+    background-color: antiquewhite;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+#section_child > div:first-child {
+    width: 100%;
+    
+}
+#section_child select {
+    width: 100px;
+    height: 30px;
+}
+#section_child input {
+    width: 300px;
+    height: 26px;
+    background-color: lightgray;
+    border: 0;
+    outline: none;
+    padding: 0 0 2px 5px;
+    border-radius: 3px;
+}
+#section_child button {
+    width: 30px;
+    height: 30px;
+    background-color: lightgray;
+    border: 0;
+    border-radius: 3px;
+}
+#section_child form {
+    display: flex;
+}
+#search_box {
+    background-color: lightgray;
+    display: flex;
+    justify-content: left;
+    margin-left: 12px;
+    border-radius: 3px;
+}
+#tbl_03 {
+    padding-top: 40px;
+}
+#tbl_03 > table {
+    width: 100%;
+    background-color: beige;
+    text-align: center;
+    border: 1px solid skyblue;
+    border-collapse: collapse;
+    justify-content: space-between;
+    
+}
+#tbl_03 > table tr {
+    height: 40px;
+}
+#tbl_03 > table tr td {
+    border: 1px solid black;
+}
