@@ -48,14 +48,11 @@ public class BoardController {
     @GetMapping("/board")
     public String board(Model model, @PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable, @RequestParam(required = false,defaultValue = "")String searchText) {
 
-//        Page<Board> list = boardService.boardList(pageable);
-//        List<BoardDto> list = boardService.boardList();
         Page<Board> list = boardRepository.findByTitleContainingOrContentContaining(searchText, searchText, pageable);
         int nowPage = list.getPageable().getPageNumber() + 1;
         int startPage = Math.max(nowPage - 2, 1);
         int endPage = Math.min(nowPage + 2, list.getTotalPages());
 
-//        model.addAttribute("boardList", boardService.boardList(pageable));
         model.addAttribute("list", list);
         model.addAttribute("nowPage", nowPage);
         model.addAttribute("startPage", startPage);
@@ -74,12 +71,7 @@ public class BoardController {
         return "redirect:board";
     }
 
-//    // 정상코드
-//    @GetMapping("/board/view")
-//    public String boardDetail(Model model, Long id) {
-//        model.addAttribute("board", boardService.boardView(id));
-//        return "board/boardview";
-//    }
+
 
     // 조회수 증가 적용
     @GetMapping("/board/view")
@@ -90,18 +82,7 @@ public class BoardController {
         return "board/boardview";
     }
 
-    // 카카오개발자에서 주소지정 불가.
-//    @GetMapping("/course")
-//    public String Course() {
-//        return "course";
-//    }
 
-
-
-//    @GetMapping("/signup")
-//    public String signup() {
-//        return "signup";
-//    }
 
 
 }
