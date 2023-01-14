@@ -1,4 +1,4 @@
-package com.product.joljak.controller;
+/*package com.product.joljak.controller;
 
 import com.product.joljak.entity.Login;
 import com.product.joljak.entity.Member;
@@ -44,3 +44,4 @@ public class LoginController {
 
     }
 }
+*/
